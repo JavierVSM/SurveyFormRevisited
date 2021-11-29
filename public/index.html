@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="alertBox">
+        </div>
+        <form class="form" action="/process" method="POST">
+            <div class="ipt">
+                <label for="userName">Name:</label>
+                <input name="userName" id="userName" type="text">
+            </div>
+            <div class="ipt">
+                <label for="local">Dojo Location:</label>
+                <select name="local" id="local">
+                    <option> -- Select A Location --</option>
+                    <option>Chicago</option>
+                    <option>Seattle</option>
+                    <option>Online</option>
+                    <option>Burbank</option>
+                    <option>Bellevue</option>
+                </select>
+            </div>
+            <div class="ipt">
+                <label for="language">Favorite Language:</label>
+                <select name="language" id="language">
+                    <option> -- Select A Language --</option>
+                    <option>HTML</option>
+                    <option>CCS</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>C#</option>
+                </select>
+            </div>
+            <div class="ipt">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+            <button class="btn" type="submit" value="create answer">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
